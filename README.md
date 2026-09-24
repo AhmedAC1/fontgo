@@ -38,7 +38,7 @@ document.body.style.fontFamily = "font name";
 ```
 ## How to fetch the JSON of those font files?
 You only have one way to do this: JS.<br>
-How to do it? Use /apigetjson and .json.
+How to do it? Use `/apigetjson` and `.json`.
 >[!NOTE]
 >This is an another asynchronous.
 ```js

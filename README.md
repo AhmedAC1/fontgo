@@ -22,6 +22,7 @@ body {
 ```
 *(you can also put it in \<style>)*
 ### JS
+#### First way (normal JS)
 >[!NOTE]
 >You need to use \<script type="module"> OR an asynchronous (`async`) function because this uses `await`.
 ```js
@@ -36,6 +37,15 @@ document.fonts.add(font);
 
 document.body.style.fontFamily = "font name";
 ```
+#### Second way (fast way)
+This fast way requires importing easyimport.js first then creating the font.
+```html
+<script src="https://ahmedac1.github.io/fontgo/easyimport.js"></script>    
+<script type="module">      
+    const font = await fastImport("font name", "font+name")      
+    document.body.style.fontFamily = "font name";    
+</script>
+```
 ## How to fetch the JSON of those font files?
 You only have one way to do this: JS.<br>
 How to do it? Use `/apigetjson` and `.json`.
@@ -46,7 +56,7 @@ const response = await fetch("https://ahmedac1.github.io/fontgo/v1/fonts/apigetj
 const all = await response.json();
 ```
 *(you can also use .then(r => r.json()); on response and skip creating all though you'll have to use response now not all)*<br>
-Then you can access it's information:
+Then you can access its information:
 ```js
 console.log(all.info.name);
 ```

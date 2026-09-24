@@ -37,7 +37,7 @@ document.fonts.add(font);
 document.body.style.fontFamily = "font name";
 ```
 ## How to fetch the JSON of those font files?
-You only have one way to do this: JS.
+You only have one way to do this: JS.<br>
 How to do it? Use /apigetjson and .json.
 >[!NOTE]
 >This is an another asynchronous.
@@ -45,7 +45,7 @@ How to do it? Use /apigetjson and .json.
 const response = await fetch("https://ahmedac1.github.io/fontgo/v1/fonts/apigetjson/font+name.json");
 const all = await response.json();
 ```
-*(you can also use .then(r => r.json()); on response and skip creating all though you'll have to use response now not all)*
+*(you can also use .then(r => r.json()); on response and skip creating all though you'll have to use response now not all)*<br>
 Then you can access it's information:
 ```js
 console.log(all.info.name);

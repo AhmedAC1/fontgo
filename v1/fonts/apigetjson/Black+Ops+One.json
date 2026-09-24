@@ -1,0 +1,11 @@
+{
+  "codename": "Black+Ops+One",
+  "css": "v1/fonts/css/Black+Ops+One.css",
+  "ttf": "v1/fonts/Black+Ops+One.ttf",
+  "info": {
+    "name": "Black Ops One",
+    "desc": "Cool font",
+    "style": "regular"
+  },
+  "coordinates": 2
+}

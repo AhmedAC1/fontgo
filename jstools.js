@@ -40,3 +40,21 @@ async function getInfo(file) {
     throw new Error("Sorry, cannot get info about this file!");
   }
 }
+
+async function getAllFonts() {
+  try {
+    const response = await fetch("https://api.github.com/repos/ahmedac1/fontgo/contents/v1/fonts/");
+    const all = await response.json();
+
+    let fonts = [];
+    for (const child of all) {
+      if (child.type === "file") {
+        fonts.push(child.name);
+      }
+    }
+    
+    return fonts;
+  } catch {
+    throw new Error("Sorry, API cannot respond!");
+  }
+}

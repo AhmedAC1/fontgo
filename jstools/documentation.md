@@ -8,6 +8,16 @@ Use this:
 <script src="https://ahmedac1.github.io/fontgo/jstools/jstools.js"></script>
 ```
 
+# Defining error type
+Available options: `js`, `custom`.<br>
+**Why this can be useful**: Sometimes the API can't respond, but because normally it throws a normal error without even putting what was the JS error, we have errorType.
+`js`: Throws the normal JS errors (`TypeError`, `SyntaxError`, etc.).<br>
+`custom`: Throws the custom ones.
+Use this:
+```html
+window.errorType = 'js';
+```
+
 # Importing fonts fast
 ## JS
 Use **fastImport**:

@@ -60,6 +60,9 @@ async function getAllFonts() {
     const response = await fetch("https://api.github.com/repos/ahmedac1/fontgo/contents/v1/fonts/");
     const all = await response.json();
 
+    console.log(all);
+    return;
+    
     let fonts = [];
     for (const child of all) {
       if (child.type === "file") {

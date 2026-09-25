@@ -37,15 +37,7 @@ document.fonts.add(font);
 
 document.body.style.fontFamily = "font name";
 ```
-#### Second way (fast way)
-This fast way requires importing easyimport.js first then creating the font.
-```html
-<script src="https://ahmedac1.github.io/fontgo/easyimport.js"></script>    
-<script type="module">      
-    const font = await fastImport("font name", "font+name")      
-    document.body.style.fontFamily = "font name";    
-</script>
-```
+
 ## How to fetch the JSON of those font files?
 You only have one way to do this: JS.<br>
 How to do it? Use `/apigetjson` and `.json`.

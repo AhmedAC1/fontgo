@@ -64,3 +64,5 @@ console.log(all.info.name);
 >[!NOTE]
 >These URLs don't work yet; we're still making the files, folders and etc.
 >This project is in early development (alpha)
+>[!NOTE]
+>You can do most of what's here much simpler by using `jstools.js`.

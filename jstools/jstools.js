@@ -1,3 +1,5 @@
+window.errorType = 'custom';
+
 async function fastImport(name, file) {
   if (typeof file !== "string") throw new Error("Sorry, file needs to be a string!");
   if (typeof name !== "string") throw new Error("Sorry, name needs to be a string!");
@@ -11,7 +13,11 @@ async function fastImport(name, file) {
     document.fonts.add(font);
     return font;
   } catch (err) {
-    throw new Error("Sorry, cannot fast import right now!");
+    if (window.errorType === 'custom') {
+      throw new Error("Sorry, cannot fast import right now!");
+    } else if (window.errorType === 'js') {
+      throw err;
+    }
   }
 }
 
@@ -26,7 +32,11 @@ async function fastImportCSS(file) {
     document.head.appendChild(link);
     return link;
   } catch (err) {
-    throw new Error("Sorry, cannot fast import the CSS right now!");
+    if (window.errorType === 'custom') {
+      throw new Error("Sorry, cannot fast import the CSS right now!");
+    } else if (window.errorType === 'js') {
+      throw err;
+    }
   }
 }
 
@@ -36,8 +46,12 @@ async function getInfo(file) {
     const all = await response.json();
 
     return all;
-  } catch {
-    throw new Error("Sorry, cannot get info about this file!");
+  } catch (err) {
+    if (window.errorType === 'custom') {
+      throw new Error("Sorry, cannot get info about this file!");
+    } else if (window.errorType === 'js') {
+      throw err;
+    }
   }
 }
 
@@ -54,7 +68,11 @@ async function getAllFonts() {
     }
     
     return fonts;
-  } catch {
-    throw new Error("Sorry, API cannot respond!");
+  } catch (err) {
+    if (window.errorType === 'custom') {
+      throw new Error("Sorry, API cannot respond!");
+    } else if (window.errorType === 'js') {
+      throw err;
+    }
   }
 }

@@ -22,7 +22,6 @@ body {
 ```
 *(you can also put it in \<style>)*
 ### JS
-#### First way (normal JS)
 >[!NOTE]
 >You need to use \<script type="module"> OR an asynchronous (`async`) function because this uses `await`.
 ```js

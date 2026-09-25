@@ -29,3 +29,14 @@ async function fastImportCSS(file) {
     throw new Error("Sorry, cannot fast import the CSS right now!");
   }
 }
+
+async function getInfo(file) {
+  try {
+    const response = await fetch("https://ahmedac1.github.io/fontgo/v1/fonts/apigetjson/" + file + ".json");
+    const all = await response.json();
+
+    return all;
+  } catch {
+    throw new Error("Sorry, cannot get info about this file!");
+  }
+}

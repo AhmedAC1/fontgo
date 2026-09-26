@@ -52,6 +52,16 @@ Then you can access its information:
 console.log(all.info.name);
 ```
 
+## How to import font styles?
+Put this in your `<head>`:
+```html
+<link rel="stylesheet" href="https://ahmedac1.github.io/fontgo/v1/fontstyles/classes.css">
+```
+Then you can use it:
+```html
+<div class="italic strike">Hello</div>
+```
+
 >[!NOTE]
 >These URLs don't work yet; we're still making the files, folders and etc.
 >This project is in early development (alpha)

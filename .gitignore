@@ -1,3 +1,7 @@
 # YML and YAML files
   *.yaml
   *.yml
+
+# Approve GitHub files
+  # Issue templates
+    !.github/ISSUE_TEMPLATE/bug_report.yml

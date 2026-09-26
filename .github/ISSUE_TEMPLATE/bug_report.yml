@@ -27,4 +27,4 @@ body:
       label: Describe it here
       placeholder: Type your issue here...
     validations:
-      required: true
+      required: false

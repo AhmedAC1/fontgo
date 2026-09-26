@@ -64,6 +64,6 @@ Then you can use it:
 
 >[!NOTE]
 >These URLs don't work yet; we're still making the files, folders and etc.
->This project is in early development (alpha)
+>This project is in early development (alpha)<br>
 >[!NOTE]
 >You can do most of what's here much simpler by using `jstools.js`.

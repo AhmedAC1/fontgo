@@ -1,0 +1,30 @@
+name: Bug Report
+description: Report a problem with the project
+title: "[Bug]: "
+labels:
+  - bug
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        # Describe the bug
+
+  - type: dropdown
+    id: problem
+    attributes:
+      label: Select what is wrong
+      options:
+        - Font not loading / Rate-limited
+        - Import not working / Throwing errors
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Describe it here
+      placeholder: Type your issue here...
+    validations:
+      required: true
